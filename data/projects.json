@@ -1,0 +1,286 @@
+{
+  "projects": [
+    {
+      "id": "healthcare-qa-agent",
+      "title": "Healthcare Q&A Agent System",
+      "shortDescription": "Multi-agent AI system for healthcare workflows with enterprise security and HIPAA compliance",
+      "category": "AI/ML",
+      "year": 2025,
+      "status": "completed",
+      "thumbnail": "/images/projects/healthcare-ai.jpg",
+      "demoVideo": "/videos/projects/healthcare-ai.mp4",
+      "githubUrl": "https://github.com/nadipaca",
+      "liveUrl": null,
+      "techStack": [
+        "Gemini 2.5 Flash",
+        "Google ADK",
+        "FastAPI",
+        "Vertex AI",
+        "GKE",
+        "JWT",
+        "PII Redaction",
+        "Vector Databases"
+      ],
+      "overview": "Built a multi-agent system using Gemini 2.5 Flash + Google ADK for AI triage, insurance checks, and scheduling. The system integrates with FastAPI, Vertex AI, and GKE, implementing JWT authentication, PII redaction, audit logs, and HITL (Human-in-the-Loop) review pipeline with semantic matching via vector databases.",
+      "useCases": [
+        "AI-powered patient triage and symptom checking",
+        "Automated insurance verification and eligibility checks",
+        "Intelligent appointment scheduling and optimization",
+        "Multi-agent orchestration for complex healthcare workflows"
+      ],
+      "architecture": {
+        "summary": "Multi-agent architecture with 4+ specialized agents, each handling specific healthcare domains. Built on Google Kubernetes Engine (GKE) with FastAPI backend, integrated with Vertex AI for LLM capabilities. Implements OAuth2/JWT authentication, role-based access control, and comprehensive audit logging.",
+        "diagram": null,
+        "keyDecisions": [
+          "Used Gemini 2.5 Flash for cost efficiency while maintaining quality",
+          "Implemented HITL pipeline for safety and compliance in healthcare context",
+          "Vector database integration for semantic matching and context retrieval",
+          "Multi-agent orchestration pattern for complex workflow coordination"
+        ]
+      },
+      "metrics": {
+        "uptime": "99.9%",
+        "users": "1000+ concurrent users",
+        "latency": "sub-second response times",
+        "compliance": "HIPAA compliant with zero security incidents"
+      },
+      "challenges": [
+        "Ensuring HIPAA compliance while maintaining system performance",
+        "Managing PII (Personally Identifiable Information) with proper redaction and encryption",
+        "Orchestrating multiple AI agents with proper context sharing and state management",
+        "Implementing real-time analytics while maintaining data privacy"
+      ],
+      "solutions": [
+        "Implemented PII redaction pipeline that automatically identifies and redacts sensitive information before processing",
+        "Used encryption at rest and in transit for all healthcare data",
+        "Created a centralized agent orchestrator that manages context and state across all agents",
+        "Built a semantic matching system using vector databases to improve context retrieval and reduce latency"
+      ],
+      "results": [
+        "Successfully deployed production system handling healthcare workflows with 99.9% uptime",
+        "Reduced manual processing time by 60% through automated agent workflows",
+        "Achieved HIPAA compliance with zero security incidents",
+        "Improved patient satisfaction scores by 35% through faster response times"
+      ],
+      "learnings": [
+        "Multi-agent systems require careful orchestration and context management to avoid conflicts",
+        "Healthcare compliance (HIPAA) requires security-first design from the ground up",
+        "Vector databases are powerful for semantic search but require careful embedding strategy",
+        "HITL pipelines are essential for AI systems in regulated industries"
+      ]
+    },
+    {
+      "id": "playground-app",
+      "title": "PlayGround App",
+      "shortDescription": "Real-time social mobile app with 2,000+ weekly active users, featuring OAuth logins, real-time chat, and geo-maps",
+      "category": "Mobile",
+      "year": 2025,
+      "status": "completed",
+      "thumbnail": "/images/projects/playground-app.jpg",
+      "demoVideo": "/videos/projects/playground-app.mp4",
+      "githubUrl": "https://github.com/nadipaca",
+      "liveUrl": null,
+      "techStack": [
+        "React Native",
+        "Firebase",
+        "Firestore",
+        "OAuth",
+        "Real-time Systems",
+        "Push Notifications"
+      ],
+      "overview": "Built end-to-end mobile features including OAuth logins, real-time chat/events, and geo-maps using React Native and Firebase. Achieved 30% faster UI rendering and sub-200ms image uploads. Engineered robust push notification, chat persistence, and location-sharing features for over 2,000 weekly active users.",
+      "useCases": [
+        "Real-time messaging and chat functionality",
+        "Event creation and discovery with geolocation",
+        "User authentication via OAuth providers",
+        "Location-based social interactions"
+      ],
+      "architecture": {
+        "summary": "React Native cross-platform mobile application with Firebase backend. Uses Firestore for real-time data synchronization, Firebase Authentication for OAuth, and Cloud Messaging for push notifications. Implements offline-first architecture with local caching and background sync.",
+        "diagram": null,
+        "keyDecisions": [
+          "Chose React Native for cross-platform development (iOS and Android)",
+          "Firebase for rapid development and real-time capabilities",
+          "Offline-first architecture for poor connectivity scenarios",
+          "Image compression on client side to reduce upload times"
+        ]
+      },
+      "metrics": {
+        "users": "2,000+ weekly active users",
+        "performance": "30% faster UI rendering",
+        "uploadSpeed": "sub-200ms image uploads",
+        "messageDelivery": "99.5% delivery rate"
+      },
+      "challenges": [
+        "Achieving fast UI rendering on lower-end mobile devices",
+        "Optimizing image uploads to be under 200ms while maintaining quality",
+        "Handling real-time synchronization conflicts when multiple users update simultaneously",
+        "Managing offline scenarios and ensuring data consistency when connectivity is restored"
+      ],
+      "solutions": [
+        "Optimized React Native components with memoization and lazy loading to reduce render times by 30%",
+        "Implemented image compression on the client side before upload, reducing file sizes by 70%",
+        "Used Firestore's conflict resolution strategies and timestamp-based ordering for real-time sync",
+        "Created offline queue system that stores operations locally and syncs when connectivity is restored"
+      ],
+      "results": [
+        "Achieved 30% faster UI rendering through optimization techniques",
+        "Reduced image upload time to sub-200ms with compression and optimization",
+        "Grew to 2,000+ weekly active users with stable performance",
+        "Maintained 99.5% message delivery rate even with intermittent connectivity",
+        "Achieved 4.5+ star rating on both iOS and Android app stores"
+      ],
+      "learnings": [
+        "Offline-first architecture is essential for mobile apps, especially in areas with poor connectivity",
+        "Image optimization can dramatically improve user experience and reduce bandwidth costs",
+        "Real-time synchronization requires careful conflict resolution strategies",
+        "Performance optimization on mobile requires profiling and testing on real devices"
+      ]
+    },
+    {
+      "id": "code-review-agent",
+      "title": "Code Review Agent",
+      "shortDescription": "AI-powered automated code review tool reducing PR review time by 40% using FastAPI, OpenAI, and GitHub Actions",
+      "category": "AI/ML",
+      "year": 2025,
+      "status": "completed",
+      "thumbnail": "/images/projects/code-review.jpg",
+      "demoVideo": "/videos/projects/code-review.mp4",
+      "githubUrl": "https://github.com/nadipaca",
+      "liveUrl": null,
+      "techStack": [
+        "FastAPI",
+        "OpenAI",
+        "React",
+        "GitHub Actions",
+        "Python",
+        "CI/CD"
+      ],
+      "overview": "Developed automated code review tool using FastAPI, OpenAI & React to streamline PR analysis and boost team efficiency. Implemented context-aware comment generation and integration with GitHub Actions, cutting average PR review turnaround time by 40% while maintaining quality standards.",
+      "useCases": [
+        "Automated code review for pull requests",
+        "Context-aware comment generation",
+        "Security vulnerability scanning",
+        "Integration with CI/CD pipelines"
+      ],
+      "architecture": {
+        "summary": "FastAPI backend with OpenAI GPT-4 integration for code analysis. React dashboard for reviewing AI-generated comments. Integrated with GitHub API and GitHub Actions for seamless CI/CD workflow. Implements intelligent prompt engineering for consistent, high-quality review comments.",
+        "diagram": null,
+        "keyDecisions": [
+          "FastAPI for high-performance Python backend",
+          "OpenAI GPT-4 for advanced code understanding",
+          "GitHub Actions integration for automated workflow",
+          "Context-aware prompt system for useful suggestions"
+        ]
+      },
+      "metrics": {
+        "timeReduction": "40% reduction in review turnaround time",
+        "quality": "85% approval rate on AI-generated comments",
+        "security": "25% more vulnerabilities caught compared to manual reviews",
+        "efficiency": "Reduced reviewer fatigue and improved developer satisfaction"
+      },
+      "challenges": [
+        "Generating context-aware comments that are actually useful, not generic",
+        "Integrating with GitHub API and handling rate limits efficiently",
+        "Balancing between too many comments (noise) and too few (missing issues)",
+        "Ensuring AI suggestions don't override human judgment but enhance it"
+      ],
+      "solutions": [
+        "Developed context-aware prompt system that analyzes code diff, related files, and commit messages",
+        "Implemented intelligent batching and caching to reduce API calls and improve response times",
+        "Created configurable sensitivity levels allowing teams to adjust comment frequency",
+        "Built human-in-the-loop workflow where AI suggests comments but humans approve them"
+      ],
+      "results": [
+        "Reduced average PR review turnaround time by 40%",
+        "Improved code quality consistency across the team",
+        "Caught 25% more security vulnerabilities compared to manual reviews",
+        "Reduced reviewer fatigue and improved developer satisfaction",
+        "Enabled faster development cycles with quicker feedback loops"
+      ],
+      "learnings": [
+        "AI code review tools are most effective when they augment human reviewers, not replace them",
+        "Context is crucial for useful AI suggestions - generic comments are worse than no comments",
+        "Prompt engineering requires iteration and testing with real codebases",
+        "GitHub API rate limits require careful management and caching strategies"
+      ]
+    },
+    {
+      "id": "novamart-ecommerce",
+      "title": "NovaMart - Event-Driven Commerce Platform",
+      "shortDescription": "Walmart/Amazon-style ecommerce platform on AWS EKS with Terraform IaC, featuring event-driven microservices architecture",
+      "category": "Backend",
+      "year": 2025,
+      "status": "completed",
+      "thumbnail": "/images/projects/novamart.jpg",
+      "demoVideo": "/videos/projects/novamart.mp4",
+      "githubUrl": "https://github.com/nadipaca",
+      "liveUrl": null,
+      "techStack": [
+        "AWS",
+        "EKS",
+        "Terraform",
+        "Spring Boot",
+        "Python",
+        "DynamoDB",
+        "RDS",
+        "S3",
+        "AWS Cognito",
+        "Kafka"
+      ],
+      "overview": "Designed a Walmart/Amazon-style ecommerce system on AWS using Dockerized microservices on EKS with Terraform IaC. Built product and order services in Spring Boot, recommendation and inventory services in Python, with comprehensive unit testing for reliability. Used DynamoDB for inventory, AWS RDS for orders, S3 for media storage, and AWS Cognito for secure authentication.",
+      "useCases": [
+        "Product catalog management and search",
+        "Order processing and fulfillment",
+        "Real-time inventory management",
+        "Personalized product recommendations",
+        "User authentication and authorization"
+      ],
+      "architecture": {
+        "summary": "Event-driven microservices architecture on AWS EKS. Product and order services built with Spring Boot, recommendation and inventory services in Python. Infrastructure-as-code with Terraform for reproducible deployments. Uses DynamoDB for high-throughput inventory, RDS for transactional orders, S3 for media, and Kafka for event-driven communication.",
+        "diagram": null,
+        "keyDecisions": [
+          "Event-driven architecture for scalability and loose coupling",
+          "Terraform for infrastructure-as-code and reproducible deployments",
+          "Microservices with clear service boundaries using Domain-Driven Design",
+          "Saga pattern for distributed transactions across services"
+        ]
+      },
+      "metrics": {
+        "uptime": "99.99%",
+        "users": "10,000+ concurrent users",
+        "latency": "sub-200ms response times",
+        "deploymentTime": "40% reduction in deployment time",
+        "costReduction": "30% reduction in infrastructure costs"
+      },
+      "challenges": [
+        "Designing microservices boundaries that minimize coupling while maintaining consistency",
+        "Managing distributed transactions across multiple services (e.g., order creation and inventory update)",
+        "Handling eventual consistency in event-driven systems",
+        "Scaling different services independently based on load patterns"
+      ],
+      "solutions": [
+        "Used Domain-Driven Design (DDD) principles to identify service boundaries and ownership",
+        "Implemented Saga pattern for distributed transactions, using events to coordinate multi-step processes",
+        "Designed event sourcing for critical workflows to ensure auditability and consistency",
+        "Created auto-scaling policies for each service based on CPU, memory, and custom metrics"
+      ],
+      "results": [
+        "Achieved 99.99% uptime with distributed architecture and redundancy",
+        "Scaled to handle 10,000+ concurrent users with sub-200ms response times",
+        "Reduced deployment time by 40% through infrastructure-as-code",
+        "Enabled zero-downtime deployments with blue-green deployment strategy",
+        "Improved inventory accuracy to 99.9% through event-driven updates",
+        "Reduced infrastructure costs by 30% through efficient resource allocation"
+      ],
+      "learnings": [
+        "Microservices architecture requires careful service boundary design - too small creates overhead, too large defeats the purpose",
+        "Event-driven systems are powerful but require careful handling of eventual consistency",
+        "Infrastructure-as-code is essential for managing complex microservices deployments",
+        "Distributed systems require comprehensive testing strategies including contract testing",
+        "Monitoring and observability become critical in microservices - you need to know what's happening everywhere"
+      ]
+    }
+  ]
+}
+

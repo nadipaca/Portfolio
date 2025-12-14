@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+      "id": "backend",
+      "name": "Backend",
+      "skills": [
+        { "name": "Java", "level": "expert", "years": 5 },
+        { "name": "Spring Boot", "level": "expert", "years": 4 },
+        { "name": "Node.js", "level": "advanced", "years": 3 },
+        { "name": "FastAPI", "level": "advanced", "years": 2 },
+        { "name": "Python", "level": "advanced", "years": 3 },
+        { "name": "REST APIs", "level": "expert", "years": 5 },
+        { "name": "GraphQL", "level": "intermediate", "years": 2 },
+        { "name": "Microservices", "level": "expert", "years": 4 }
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "skills": [
+        { "name": "React", "level": "advanced", "years": 3 },
+        { "name": "React Native", "level": "advanced", "years": 2 },
+        { "name": "TypeScript", "level": "advanced", "years": 3 },
+        { "name": "Next.js", "level": "intermediate", "years": 1 },
+        { "name": "JavaScript (ES6+)", "level": "advanced", "years": 4 },
+        { "name": "Tailwind CSS", "level": "intermediate", "years": 2 }
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud & DevOps",
+      "skills": [
+        { "name": "AWS", "level": "advanced", "years": 4 },
+        { "name": "EC2", "level": "advanced", "years": 3 },
+        { "name": "EKS", "level": "intermediate", "years": 2 },
+        { "name": "S3", "level": "advanced", "years": 3 },
+        { "name": "Docker", "level": "advanced", "years": 4 },
+        { "name": "Kubernetes", "level": "intermediate", "years": 2 },
+        { "name": "Terraform", "level": "intermediate", "years": 2 },
+        { "name": "CI/CD Pipelines", "level": "advanced", "years": 4 },
+        { "name": "GitHub Actions", "level": "advanced", "years": 3 }
+      ]
+    },
+    {
+      "id": "databases",
+      "name": "Databases",
+      "skills": [
+        { "name": "PostgreSQL", "level": "advanced", "years": 4 },
+        { "name": "MySQL", "level": "advanced", "years": 3 },
+        { "name": "MongoDB", "level": "intermediate", "years": 2 },
+        { "name": "Redis", "level": "intermediate", "years": 2 },
+        { "name": "DynamoDB", "level": "intermediate", "years": 1 },
+        { "name": "Firebase/Firestore", "level": "advanced", "years": 2 }
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI/ML",
+      "skills": [
+        { "name": "OpenAI API", "level": "advanced", "years": 1 },
+        { "name": "Google Gemini", "level": "intermediate", "years": 1 },
+        { "name": "Vertex AI", "level": "intermediate", "years": 1 },
+        { "name": "LLM Integration", "level": "intermediate", "years": 1 },
+        { "name": "Multi-Agent Systems", "level": "intermediate", "years": 1 },
+        { "name": "Vector Databases", "level": "beginner", "years": 1 }
+      ]
+    },
+    {
+      "id": "messaging",
+      "name": "Messaging & Events",
+      "skills": [
+        { "name": "Kafka", "level": "intermediate", "years": 2 },
+        { "name": "Event Sourcing", "level": "intermediate", "years": 2 },
+        { "name": "RabbitMQ", "level": "beginner", "years": 1 }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security & Auth",
+      "skills": [
+        { "name": "OAuth2", "level": "advanced", "years": 4 },
+        { "name": "JWT", "level": "advanced", "years": 4 },
+        { "name": "RBAC", "level": "advanced", "years": 3 },
+        { "name": "API Gateway", "level": "intermediate", "years": 2 },
+        { "name": "PII Handling", "level": "intermediate", "years": 1 }
+      ]
+    },
+    {
+      "id": "testing",
+      "name": "Testing & Monitoring",
+      "skills": [
+        { "name": "JUnit", "level": "advanced", "years": 4 },
+        { "name": "Mockito", "level": "advanced", "years": 3 },
+        { "name": "Postman", "level": "advanced", "years": 3 },
+        { "name": "Splunk", "level": "intermediate", "years": 2 },
+        { "name": "SonarQube", "level": "intermediate", "years": 2 }
+      ]
+    }
+  ]
+}
+

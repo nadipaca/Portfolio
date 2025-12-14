@@ -1,0 +1,32 @@
+{
+  "id": "charishma-nadipalli",
+  "name": "Charishma Nadipalli",
+  "title": "Senior Java Software Engineer",
+  "yearsExperience": 5,
+  "location": "Cincinnati, OH",
+  "email": "nadipaca@mail.uc.edu",
+  "phone": "+1 513-212-1754",
+  "github": "https://github.com/nadipaca",
+  "linkedin": "https://linkedin.com/in/charishma-nadipalli",
+  "resumeUrl": "/resume.pdf",
+  "bio": {
+    "short": "Full Stack Engineer building scalable backend systems and AI-powered products used in production.",
+    "long": "I'm a Senior Java Software Engineer with 5+ years of experience building enterprise-grade applications. Currently working at UC Information Technology Solution Center on MCESC & Macy's projects, I specialize in developing scalable microservices architectures, implementing AI-powered solutions, and optimizing system performance. My expertise spans Java, Spring Boot, React, AWS, and AI/LLM integration. I'm passionate about building production-ready systems that solve real-world problems while maintaining high code quality and system reliability."
+  },
+  "education": {
+    "degree": "Master's in Information Technology",
+    "institution": "University of Cincinnati",
+    "location": "Cincinnati, OH",
+    "gpa": "4.0/4.0",
+    "expectedGraduation": "December 2025",
+    "coursework": [
+      "Machine Learning",
+      "Data Mining",
+      "Azure Data Engineering",
+      "Mobile App Tech",
+      "Human-Computer Interaction",
+      "Cybersecurity"
+    ]
+  }
+}
+
