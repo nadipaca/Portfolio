@@ -50,18 +50,6 @@ npm start
 
 ## Customization
 
-### Add Project Images and Videos
-
-1. Create a `public/projects/` folder in your project root
-2. Add your project media files with these exact names:
-   - `healthcare-ai.jpg` and `healthcare-ai.mp4`
-   - `playground-app.jpg` and `playground-app.mp4`
-   - `code-review.jpg` and `code-review.mp4`
-   - `novamart.jpg` and `novamart.mp4`
-
-3. The portfolio will automatically display images/videos when they're available
-4. If media files are missing, placeholder gradients will be shown
-
 ### Update Links
 
 Edit the following files to update social links and resume:
@@ -70,7 +58,7 @@ Edit the following files to update social links and resume:
 
 ### Update Projects
 
-Edit `components/sections/featured-projects.tsx` to modify project details, add demo links, or update media paths.
+Edit `components/sections/featured-projects.tsx` to modify project details.
 
 ### Update Experience
 

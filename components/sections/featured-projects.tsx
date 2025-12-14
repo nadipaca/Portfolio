@@ -1,166 +1,89 @@
-"use client";
-
-import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, Play, Image as ImageIcon } from "lucide-react";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Healthcare Q&A Agent System",
-    shortDescription: "Multi-agent AI system for healthcare workflows with enterprise security",
-    tech: ["Gemini 2.5 Flash", "Google ADK", "FastAPI", "Vertex AI", "GKE", "JWT"],
-    highlights: [
-      "4+ specialized agents for triage, scheduling, and insurance",
-      "HIPAA-compliant PII redaction with audit logs",
-      "Vector database semantic matching"
-    ],
-    github: "https://github.com/nadipaca",
-    demo: null,
-    image: "/projects/healthcare-ai.jpg", // You'll add these images
-    video: "/projects/healthcare-ai.mp4", // You'll add these videos
-    hasMedia: true,
-  },
-  {
     title: "PlayGround App",
-    shortDescription: "Real-time social mobile app with 2,000+ weekly active users",
-    tech: ["React Native", "Firebase", "Firestore", "OAuth", "Real-time Systems"],
+    problem: "Need for a real-time collaborative mobile platform with seamless user experience.",
+    solution: "Built a React Native mobile app with Firebase real-time synchronization and offline-first architecture.",
+    tech: ["React Native", "Firebase", "Real-time Systems", "Offline Sync"],
     highlights: [
-      "30% faster UI rendering, sub-200ms image uploads",
-      "Real-time chat, push notifications, location-sharing",
-      "2,000+ weekly active users"
+      "Real-time data synchronization across multiple devices with conflict resolution",
+      "Offline-first architecture with local caching and background sync",
+      "Optimized bundle size and performance for mobile networks"
     ],
-    github: "https://github.com/nadipaca",
+    github: "https://github.com",
     demo: null,
-    image: "/projects/playground-app.jpg",
-    video: "/projects/playground-app.mp4",
-    hasMedia: true,
   },
   {
     title: "Code Review Agent",
-    shortDescription: "AI-powered automated code review tool reducing PR time by 40%",
-    tech: ["FastAPI", "OpenAI", "React", "GitHub Actions", "Python"],
+    problem: "Manual code reviews are time-consuming and inconsistent across teams.",
+    solution: "AI-powered code review system using FastAPI and OpenAI to automate and standardize review processes.",
+    tech: ["FastAPI", "OpenAI", "GitHub Actions", "Python"],
     highlights: [
-      "Context-aware comment generation",
-      "GitHub Actions CI/CD integration",
-      "40% reduction in review turnaround time"
+      "Automated PR reviews with context-aware suggestions and security scanning",
+      "Integrated with GitHub Actions for seamless CI/CD workflow",
+      "Reduced code review time by 60% while maintaining quality standards"
     ],
-    github: "https://github.com/nadipaca",
+    github: "https://github.com",
     demo: null,
-    image: "/projects/code-review.jpg",
-    video: "/projects/code-review.mp4",
-    hasMedia: true,
   },
   {
-    title: "NovaMart - Event-Driven Commerce",
-    shortDescription: "Walmart/Amazon-style ecommerce platform on AWS EKS",
-    tech: ["AWS", "EKS", "Terraform", "Spring Boot", "DynamoDB", "RDS", "S3"],
+    title: "Healthcare Multi-Agent AI System",
+    problem: "Complex healthcare workflows require intelligent orchestration with strict security and compliance.",
+    solution: "Multi-agent AI system using Gemini and Vertex AI on GKE with enterprise-grade security.",
+    tech: ["Gemini", "GKE", "Vertex AI", "JWT", "PII Handling", "Kubernetes"],
     highlights: [
-      "Event-driven microservices architecture",
-      "Terraform IaC for reproducible deployments",
-      "Comprehensive unit testing for reliability"
+      "Multi-agent orchestration with role-based access control and JWT authentication",
+      "HIPAA-compliant PII handling with encryption at rest and in transit",
+      "Scalable Kubernetes deployment with auto-scaling and health monitoring"
     ],
-    github: "https://github.com/nadipaca",
+    github: "https://github.com",
     demo: null,
-    image: "/projects/novamart.jpg",
-    video: "/projects/novamart.mp4",
-    hasMedia: true,
+  },
+  {
+    title: "NovaMart Event-Driven Ecommerce Platform",
+    problem: "Traditional monolithic ecommerce systems struggle with scale and real-time inventory management.",
+    solution: "Event-driven microservices architecture on AWS EKS with Terraform infrastructure-as-code.",
+    tech: ["AWS", "EKS", "Terraform", "Spring Boot", "Event Sourcing", "Kafka"],
+    highlights: [
+      "Event-driven architecture with Kafka for real-time inventory and order processing",
+      "Infrastructure-as-code with Terraform enabling reproducible deployments",
+      "Microservices with API gateway, service mesh, and distributed tracing"
+    ],
+    github: "https://github.com",
+    demo: null,
   },
 ];
 
 export function FeaturedProjects() {
-  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
-
   return (
-    <section id="projects" className="py-20 px-4 scroll-mt-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Featured Projects
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Production systems demonstrating architecture, scalability, and technical depth
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <section id="projects" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          Featured Projects
+        </h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Production systems demonstrating architecture, scalability, and technical depth
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
-            <ScrollReveal key={index} delay={index * 100}>
-              <Card 
-              key={index} 
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-primary/10 hover:border-primary/30"
-            >
-              {/* Media Section */}
-              {project.hasMedia && (
-                <div className="relative h-64 bg-gradient-to-br from-primary/10 to-primary/5 overflow-hidden">
-                  {playingVideo === index ? (
-                    <video
-                      className="w-full h-full object-cover"
-                      controls
-                      autoPlay
-                      onEnded={() => setPlayingVideo(null)}
-                    >
-                      <source src={project.video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <>
-                      {project.image ? (
-                        <div className="relative w-full h-full">
-                          <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            onError={(e) => {
-                              // Fallback if image doesn't exist
-                              e.currentTarget.style.display = 'none';
-                            }}
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                        </div>
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5">
-                          <div className="text-center">
-                            <ImageIcon className="h-16 w-16 text-primary/30 mx-auto mb-2" />
-                            <p className="text-xs text-muted-foreground">Add image/video</p>
-                          </div>
-                        </div>
-                      )}
-                      <button
-                        onClick={() => project.video && setPlayingVideo(index)}
-                        className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors group"
-                        aria-label="Play video"
-                      >
-                        {project.video && (
-                          <div className="p-4 rounded-full bg-primary/90 hover:bg-primary transition-colors">
-                            <Play className="h-8 w-8 text-white ml-1" fill="white" />
-                          </div>
-                        )}
-                      </button>
-                    </>
-                  )}
-                </div>
-              )}
-
+            <Card key={index} className="flex flex-col">
               <CardHeader>
-                <CardTitle className="text-2xl group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
-                <CardDescription className="text-base">
-                  {project.shortDescription}
+                <CardTitle className="text-2xl">{project.title}</CardTitle>
+                <CardDescription className="text-sm">
+                  <span className="font-semibold">Problem: </span>{project.problem}
+                </CardDescription>
+                <CardDescription className="text-sm">
+                  <span className="font-semibold">Solution: </span>{project.solution}
                 </CardDescription>
               </CardHeader>
-
-              <CardContent>
+              <CardContent className="flex-grow">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
-                    <Badge 
-                      key={techIndex} 
-                      variant="secondary" 
-                      className="text-xs border-primary/20 hover:border-primary/40 transition-colors"
-                    >
+                    <Badge key={techIndex} variant="secondary" className="text-xs">
                       {tech}
                     </Badge>
                   ))}
@@ -168,42 +91,33 @@ export function FeaturedProjects() {
                 <ul className="space-y-2 text-sm">
                   {project.highlights.map((highlight, highlightIndex) => (
                     <li key={highlightIndex} className="flex items-start">
-                      <span className="text-primary mr-2 font-bold">•</span>
+                      <span className="text-primary mr-2">•</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-
               <CardFooter className="gap-2">
-                <Button variant="outline" size="sm" asChild className="flex-1">
+                <Button variant="outline" size="sm" asChild>
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
-                    View Code
+                    Code
                   </a>
                 </Button>
                 {project.demo && (
-                  <Button variant="outline" size="sm" asChild className="flex-1">
+                  <Button variant="outline" size="sm" asChild>
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
+                      Demo
                     </a>
                   </Button>
                 )}
               </CardFooter>
-              </Card>
-            </ScrollReveal>
+            </Card>
           ))}
-        </div>
-
-        {/* Instructions for adding media */}
-        <div className="mt-8 p-4 bg-muted/50 rounded-lg border border-dashed border-primary/30">
-          <p className="text-sm text-muted-foreground text-center">
-            <strong>Note:</strong> To add project images/videos, create a <code className="px-1 py-0.5 bg-background rounded">public/projects/</code> folder 
-            and add your media files (e.g., <code className="px-1 py-0.5 bg-background rounded">healthcare-ai.jpg</code>, <code className="px-1 py-0.5 bg-background rounded">playground-app.mp4</code>)
-          </p>
         </div>
       </div>
     </section>
   );
 }
+

@@ -22,7 +22,7 @@ export function Architecture() {
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Architecture principles and practices for scalable, reliable systems
         </p>
-        <Card className="border-primary/10 hover:shadow-lg transition-shadow">
+        <Card>
           <CardHeader>
             <CardTitle>Core Principles</CardTitle>
           </CardHeader>
