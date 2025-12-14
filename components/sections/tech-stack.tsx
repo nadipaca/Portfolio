@@ -37,14 +37,14 @@ export function TechStack() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {techCategories.map((category, index) => (
-            <Card key={index}>
+            <Card key={index} className="hover:shadow-lg transition-shadow border-primary/10">
               <CardHeader>
                 <CardTitle className="text-lg">{category.category}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {category.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="text-xs">
+                    <Badge key={techIndex} variant="outline" className="text-xs border-primary/20 hover:border-primary/40 transition-colors">
                       {tech}
                     </Badge>
                   ))}

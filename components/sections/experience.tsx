@@ -1,51 +1,63 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 const experiences = [
   {
-    company: "US Bank Fidelity (Cognizant)",
-    role: "Full Stack Software Developer",
+    company: "MCESC & Macy's Projects — UC Information Technology Solution Center",
+    role: "Full Stack Developer",
+    period: "May 2025 - Present",
     bullets: [
-      "Architected and deployed microservices on AWS EKS, reducing backend latency by 35% through database query optimization and caching strategies",
-      "Implemented event-driven architecture with Kafka, processing 10K+ events/second for real-time inventory and order management",
-      "Led infrastructure-as-code migration using Terraform, reducing deployment time by 40% and enabling zero-downtime deployments"
+      "Applied object-oriented design and deployed enterprise Java Spring Boot microservices and Node.js services on AWS EC2 with Docker, improving deployment speed by 40% and supporting 99.99% uptime",
+      "Built responsive React, TypeScript dashboards with offline-capable ShadCN forms, improving UX delivery speed",
+      "Automated CI/CD pipelines (GitHub Actions) with Redis caching, improving reliability throughput by 40%",
+      "Secured access and vulnerabilities via OAuth2/JWT and API Gateway, strengthening RBAC and compliance",
+      "Tuned PostgreSQL queries using ORM optimizations and stored procedures to reduce latency by 35%"
     ],
   },
   {
-    company: "UC IT / Macy's Projects",
+    company: "US Bank Fidelity — Cognizant Technology Solutions",
     role: "Full Stack Developer",
+    period: "Jul 2019 - Jul 2024",
     bullets: [
-      "Built React Native mobile applications with Firebase real-time synchronization, supporting 2,000+ weekly active users",
-      "Developed RESTful APIs using Spring Boot and Node.js, maintaining 99.99% uptime for critical business operations",
-      "Implemented OAuth2/JWT authentication and RBAC, ensuring secure access control across multi-tenant systems"
+      "Built and deployed full-stack joint owner features (React + Spring Boot), reducing processing delays by 30% through robust API design and adherence to SDLC best practices",
+      "Optimized multithreading, SQL queries, and high-volume ingestion pipelines, boosting throughput by 35%",
+      "Built secure OAuth2/JWT APIs and centralized observability with Splunk, reducing incident MTTR by 45%",
+      "Integrated GraphQL+React query services, cutting API over-fetching and improving response times by 40%",
+      "Automated deployments (Docker, GitHub Actions) enhancing team delivery in Agile PI planning ceremonies"
     ],
   },
 ];
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 px-4">
+    <section id="experience" className="py-20 px-4 scroll-mt-16">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Experience Snapshot
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Experience Snapshot
+          </h2>
+        </ScrollReveal>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <Card key={index}>
+            <ScrollReveal key={index} delay={index * 150}>
+              <Card className="hover:shadow-lg transition-all duration-300 hover:scale-[1.02] border-primary/10">
               <CardHeader>
                 <CardTitle className="text-xl">{exp.role}</CardTitle>
                 <p className="text-sm text-muted-foreground font-medium">{exp.company}</p>
+                <p className="text-xs text-muted-foreground mt-1">{exp.period}</p>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   {exp.bullets.map((bullet, bulletIndex) => (
                     <li key={bulletIndex} className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
+                      <span className="text-primary mr-2 font-bold">•</span>
                       <span className="text-sm">{bullet}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-            </Card>
+              </Card>
+            </ScrollReveal>
           ))}
         </div>
       </div>
